@@ -32,4 +32,8 @@ public interface NhanVienRepository extends CrudRepository<NhanVien, String> {
             "group by cn.MaNV " +
             "having count(cn.maMB) = 3)", nativeQuery = true)
     List<String> findMaPhiCongLai3LoaiMayBay();
+    @Query(value = "select * from NhanVien nv " +
+            "where nv.maNV not in (select cn.MaNV from ChungNhan cn " +
+            "group by cn.MaNV )", nativeQuery = true)
+    List<NhanVien> findNhanVienKhongPhaiLaPhiCong();
 }

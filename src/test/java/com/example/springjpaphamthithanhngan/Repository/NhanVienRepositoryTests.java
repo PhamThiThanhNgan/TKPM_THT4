@@ -36,4 +36,8 @@ public class NhanVienRepositoryTests {
     void cau22(){
         System.out.println(nhanVienRepository.findMaPhiCongLai3LoaiMayBay());
     }
+    @Test
+    void cau25(){
+        System.out.println(nhanVienRepository.findNhanVienKhongPhaiLaPhiCong());
+    }
 }

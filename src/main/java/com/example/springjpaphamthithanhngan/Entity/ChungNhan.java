@@ -9,16 +9,18 @@ import java.io.Serializable;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Setter
+@Getter
 @Table(name = "chungnhan")
 @IdClass(ChungNhanPK.class)
 public class ChungNhan implements Serializable {
     @Id
     @ManyToOne
     @JoinColumn(name = "manv", columnDefinition = "varchar(10)")
-    public NhanVien MaNV;
+    public NhanVien maNV;
 
     @Id
     @ManyToOne
     @JoinColumn(name = "mamb", columnDefinition = "int")
-    public MayBay MaMB;
+    public MayBay maMB;
 }

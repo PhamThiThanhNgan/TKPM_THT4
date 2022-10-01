@@ -34,4 +34,8 @@ public class ChuyenBayRepositoryTests {
     void cau20(){
         System.out.print(chuyenBayRepository.findChuyenBayKhoiHanhTruoc12h());
     }
+    @Test
+    void cau21(){
+        System.out.print(chuyenBayRepository.demChuyenBayKhoiHanhTruoc12h());
+    }
 }

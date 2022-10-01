@@ -16,4 +16,8 @@ public class NhanVienRepositoryTests {
     void cau8(){
         System.out.println("Tổng lương phải trả cho nhân viên: " + nhanVienRepository.tinhTongLuong());
     }
+    @Test
+    void cau9(){
+        System.out.println(nhanVienRepository.getMaByLoaiMayBay());
+    }
 }

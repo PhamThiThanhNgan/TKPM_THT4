@@ -17,4 +17,9 @@ public interface MayBayRepository extends CrudRepository<MayBay, Integer> {
     @Query("select mb.loai from MayBay mb " +
             "where mb.tamBay >= (select cb.doDai from ChuyenBay cb where cb.maCB = 'VN280')")
     List<String> loaiMayBayChuyenVN280();
+    @Query(value = "select cn.MaMB as maMB, mb.loai as loai, count(cn.MaNV) as TongPhiCong " +
+            "from MayBay mb, ChungNhan cn " +
+            "where mb.maMB = cn.MaMB " +
+            "group by cn.MaMB", nativeQuery = true)
+    List<Object> demSoPhiCongLaiMayBay();
 }

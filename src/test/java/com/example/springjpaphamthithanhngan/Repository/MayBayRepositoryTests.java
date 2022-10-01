@@ -24,4 +24,8 @@ public class MayBayRepositoryTests {
     void cau13(){
         System.out.println(mayBayRepository.loaiMayBayChuyenVN280());
     }
+    @Test
+    void cau16(){
+        System.out.println(mayBayRepository.demSoPhiCongLaiMayBay());
+    }
 }

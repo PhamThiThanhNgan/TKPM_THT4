@@ -44,4 +44,8 @@ public class NhanVienRepositoryTests {
     void cau26(){
         System.out.println(nhanVienRepository.findNhanVienCoMaxLuong());
     }
+    @Test
+    void cau27(){
+        System.out.println(nhanVienRepository.tinhTongLuongChoPhiCong());
+    }
 }

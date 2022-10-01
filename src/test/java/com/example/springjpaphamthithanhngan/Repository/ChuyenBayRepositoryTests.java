@@ -30,4 +30,8 @@ public class ChuyenBayRepositoryTests {
     void cau14(){
         System.out.print(chuyenBayRepository.findChuyenBayByMayBayAirbusA320());
     }
+    @Test
+    void cau20(){
+        System.out.print(chuyenBayRepository.findChuyenBayKhoiHanhTruoc12h());
+    }
 }
